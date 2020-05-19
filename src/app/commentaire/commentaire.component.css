@@ -1,0 +1,32 @@
+.comm-date {
+    color:lightgray;
+    margin-right:5px;
+}
+.comm-auteur {
+    color:orangered;
+    margin-right:5px;
+}
+
+.comm-content {
+    border-top:1px solid lightgray;
+    width:100%;
+}
+.comm-list-item {
+    width:100%;
+}
+.comm-form-add {
+    width:100%;
+    border-left:1px solid orangered;
+    border-radius:10px;
+    padding-left:10px;
+    display:flex;
+    justify-content: space-between;
+}
+.comm-contenu {
+    width:auto;
+    height:36px;
+    margin-top:5px;
+}
+.comm-display{
+    display:inline-flex;
+}

@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+}
+
+.date-et-heure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.description {
+  min-height: 100px;
+}
+
+@media(max-width: 600px) {
+  .date-et-heure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+  }
+
+}

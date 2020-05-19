@@ -1,0 +1,62 @@
+<!-- (displayType)="homeApp.displayTypeActivite($event)"> -->
+<app-sidemenu (displayType)=displayTypeActivite($event)></app-sidemenu>
+<div class="container">
+
+    <mat-accordion class="liste">
+        <mat-expansion-panel *ngFor="let activite of activites" class="activite">
+            <mat-expansion-panel-header>
+
+                <mat-panel-title>
+                    <mat-panel-description class="type-activite">
+                        <mat-icon class="icone-type-activite">
+                            {{activite.type.icone}}
+                        </mat-icon>
+                        {{activite.type.type}}
+                    </mat-panel-description>
+                </mat-panel-title>
+                <mat-panel-title>
+                    {{activite.titre}}
+                </mat-panel-title>
+
+            </mat-expansion-panel-header>
+            <div class="activite-expansion">
+
+                <mat-panel-title>
+                    <mat-icon>perm_identity</mat-icon> {{activite.auteur}}
+                </mat-panel-title>
+                <mat-panel-title>
+                    <mat-icon>location_on</mat-icon>{{activite.lieu}}
+                </mat-panel-title>
+                <mat-panel-title>
+                    <mat-icon>insert_invitation</mat-icon> {{dateToJMA_str(activite.date)}}
+                </mat-panel-title>
+                <mat-panel-title>
+                    <mat-icon>schedule</mat-icon>{{activite.heure}}h00
+                </mat-panel-title>
+
+            </div>
+            <div class="activite-description">
+                <div class="titre-activite-description">
+                    <p>
+                        <mat-icon id="icone-description">description</mat-icon>Description
+                    </p>
+                </div>
+                <div class="content-activite-description">
+                    {{activite.description}}
+                </div>
+
+            </div>
+            
+            <app-commentaire [act]=activite></app-commentaire>
+
+
+        </mat-expansion-panel>
+    </mat-accordion>
+    <button class="add-button" mat-icon-button (click)="toAddActivite()">
+        <mat-icon>add</mat-icon>
+    </button>
+    <!-- MESSAGES PRIVES : A TERMINER
+    <button class="messagepv-button" mat-icon-button (click)="toMessagePv()">
+        <mat-icon>chat</mat-icon>
+    </button> -->
+</div>

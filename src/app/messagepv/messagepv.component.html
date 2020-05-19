@@ -1,0 +1,21 @@
+
+<div class="mpv-content">
+    <!-- <mat-list role="list" *ngFor="let m of mps" >
+        <button mat-button class="button-menu-item" >-->
+        <!-- (click)="ClickType(type.type)"> -->
+            <!-- <mat-list-item role="listitem">
+                    <mat-icon matListIcon>{{type.icone}}</mat-icon> 
+                {{m.contenu}}
+            </mat-list-item>
+        </button>
+    </mat-list>-->
+
+    <form class="mpv-send-msg" (ngSubmit)="OnNewMessageSubmit()">
+        <input autocomplete="off" matInput placeholder="Destinataire" [formControl]="destFormControl">
+        <textarea matInput placeholder="Votre message.." [formControl]="contenuFormControl"></textarea>
+        <button mat-button type="submit">
+            <mat-icon matListIcon>send</mat-icon>
+            Envoyer
+        </button>
+    </form>
+</div>

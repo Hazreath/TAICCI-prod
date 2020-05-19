@@ -1,0 +1,34 @@
+<button mat-button class="button_open-left-menu" (click)="ChangeOpenStatus()">
+    <mat-icon>menu</mat-icon>
+</button>
+
+<mat-sidenav  #sidenav mode="side" [(opened)]="opened" hasBackdrop="true" class="left-menu">
+    <mat-sidenav-container>
+        <mat-sidenav-content 
+        class="left-menu-content">
+<!-- TODO : FAIRE LIEN BD ET MENU : on click sur btn display les bonnes annonces -->
+        <mat-list role="list">
+            <button mat-button class="button-menu-item" 
+            (click)="ClickAll()">
+                <mat-list-item role="listitem">
+                    <mat-icon matListIcon>home</mat-icon>
+                    Toutes les annonces
+                </mat-list-item>
+            </button>
+        </mat-list>    
+            
+            <mat-list role="list" *ngFor="let type of types" >
+                <button mat-button class="button-menu-item" 
+                (click)="ClickType(type.type)">
+                    <mat-list-item role="listitem">
+                        <mat-icon matListIcon>{{type.icone}}</mat-icon>
+                        {{type.type}}
+                    </mat-list-item>
+                </button>
+            </mat-list>
+        </mat-sidenav-content>
+
+        
+    </mat-sidenav-container>
+</mat-sidenav>
+

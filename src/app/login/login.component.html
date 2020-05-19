@@ -1,0 +1,19 @@
+<div class="all-page">
+    <div class="login">
+      <!-- <div class="artboard"></div> -->
+      <div class="titre">{{title}}</div>
+      <form class="formulaire" [formGroup]="formulaire" name="formulaire" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+          <input autocomplete="off" matInput placeholder="Adresse électronique" [formControl]="LoginFormControl">
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <input autocomplete="off" type="password" matInput placeholder="Mot de passe" [formControl]="PswFormControl">
+        </mat-form-field>
+        <div class="buttons">
+          <button mat-stroked-button type="reset" color="primary">Cancel</button>
+          <button mat-flat-button type="submit" color="primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,13 @@
+<mat-toolbar class="toolbar-back">
+    <mat-toolbar-row>
+        <span style="color: #4e1596;">TAICCI</span>
+        <form class="form_recherche" [formGroup]="formulaire" name="formulaire" (ngSubmit)="onSearch()">
+            <mat-form-field class="search-form-field">
+                <input matInput [formControl]="searchFormControl">
+              </mat-form-field>
+            <button mat-icon-button type="submit" aria-label="Example icon-button with a heart icon">
+                <mat-icon>search</mat-icon>
+            </button>
+        </form>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+.add-button {
+  align-self: flex-end;
+  margin: 16px;
+}
+
+.activite {
+  margin: 20px;
+}
+
+.type-activite{
+  align-items: center;
+}
+.icone-type-activite {
+  margin-right:10px;
+}
+.liste {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+}
+
+.activite-expansion {
+  display:flex;
+  flex:1;
+  flex-direction:row;
+  align-items:center;
+  overflow:hidden;
+  flex-wrap: wrap;
+  word-wrap: normal;
+}
+
+mat-panel-title > mat-icon {
+  margin-right:10px;
+  color:#de1449;
+}
+mat-panel-title {
+  align-items:center;
+  flex-basis:0;
+}
+.activite-description {
+  margin: 10px 20px 10px 20px;
+  padding:0 10px 0 10px;
+}
+.titre-activite-description {
+  margin-top:20px;
+  text-align:center;
+  border-bottom:3px dotted gray;
+  display:flex;
+  flex-direction: column;
+}
+.titre-activite-description > p {
+  display:flex;
+  align-items:center;
+  align-content: center;
+  align-self:center;
+}
+.content-activite-description {
+  margin-top:20px;
+  
+}
+#icone-description {
+  color:#de1449;
+  margin-right:10px;
+}
+mat-panel-description > mat-icon {
+  color: orangered;
+}
+.mat-content > mat-panel-title, .mat-content > mat-panel-description {
+  flex: 0 0 auto;
+}

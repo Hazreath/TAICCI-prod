@@ -1,0 +1,22 @@
+<div class="comm-content">
+    
+
+    <mat-list role="list" *ngFor="let c of commentaires">
+        
+    
+            <div class="comm-display" role="listitem">
+                <p class="comm-date">{{dateToJMA_str(c.date)}}</p>
+                <p class="comm-auteur">{{c.auteur.name}}</p>
+                <p>{{c.contenu}}</p>
+            </div>
+        
+    </mat-list>
+    <form class="comm-form-add" (ngSubmit)="OnNewCommentaireSubmit()">
+        <input class="comm-contenu" autocomplete="off" matInput placeholder="Commentez..." [formControl]="commFormControl">
+        
+        <button mat-button type="submit">
+            <mat-icon matListIcon>send</mat-icon>
+            Envoyer
+        </button>
+    </form>
+</div>

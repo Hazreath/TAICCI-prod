@@ -1,0 +1,15 @@
+.toolbar-back {
+  display: block;
+  background-image: url('../../assets/images/ccinew.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form_recherche{
+  padding-left: 10px;
+  width:100%;
+  text-align:center;
+}
+.search-form-field {
+  width:20%;
+}
