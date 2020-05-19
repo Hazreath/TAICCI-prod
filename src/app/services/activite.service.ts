@@ -27,6 +27,7 @@ export class ActiviteService {
     return await this.http.get('activite', '').toPromise();
   }
 
+  // Effectue la recherche du paramètre text spécifié
   async getSearch(text : string){
     if (text.length != 0){
       return await this.http.get('activite/search/', text).toPromise();

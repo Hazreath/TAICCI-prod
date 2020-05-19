@@ -67,10 +67,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  // Affiche toutes les activités
   public async displayAllActivites() {
     this.activites = await this._ACTIVITESERVICE.getAll();
   }
-
+  // Conversion date issue de DateTime en date
+  // compréhensible par l'user
   public dateToJMA_str(date : String) {
     var s_date = date.split('-');
     var s_dayHours = s_date[2].split('T');
@@ -79,10 +81,9 @@ export class HomeComponent implements OnInit {
           + HomeComponent.MONTHS[parseInt(s_date[1])-1] + " "
           + s_date[0];
     return r;
-    // return '' + date.getDay() + HomeComponent.DATE_SEPARATOR
-    // + HomeComponent.MONTHS[date.getMonth()-1] + HomeComponent.DATE_SEPARATOR
-    // + date.getFullYear() + HomeComponent.DATE_SEPARATOR;
+    
   }
+  // Retourne l'heure issue d'un DateTime
   public getHourFromDate(date:String) {
     var s_hour = date.split("T");
     return s_hour[1];

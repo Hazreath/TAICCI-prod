@@ -13,7 +13,7 @@ export class SearchService {
 
   async search(searchText: string) {
 
-    console.log(searchText);
+    
     this.activites = await this._ACTIVITESERVICE.getSearch(searchText);
 
     this.changeSearch.emit(this.activites);

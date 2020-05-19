@@ -32,19 +32,20 @@ export class SidemenuComponent implements OnInit {
     this.types = await this._TYPEACTIVITESERVICE.getAll();
     this.opened = false;
   }
-
+  // ouvre ou non le sidemenu
   ChangeOpenStatus() {
     this.opened = !this.opened;
-   
   }
-
+  // déclenchée quand click sur un item du sidemenu
+  // change le type d'activite affichee
   ClickType(type:TypeActivite) {
     this.displayType.emit(type);
     this.ChangeOpenStatus();
     
     
   }
-  
+  // déclenché quand click sur toutes les annonces
+  // affiche toutes les activites
   ClickAll() {
     this.displayType.emit();
     this.ChangeOpenStatus();
